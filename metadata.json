@@ -1,0 +1,6 @@
+{
+  "name": "Surat Maaf untuk Nia",
+  "description": "Website permintaan maaf romantis dan lucu untuk Nila Uzlifatul Fikri Sa'adah dengan taman bunga interaktif dan musik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

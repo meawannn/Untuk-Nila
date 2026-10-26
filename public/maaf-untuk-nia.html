@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surat Maaf untuk Nila | Dari Hatiku yang Paling Dalam</title>
+  <meta name="description" content="Surat permintaan maaf tulus dan romantis untuk Nila Uzlifatul Fikri Sa'adah">
+  
+  <!-- Google Fonts: Playfair Display (Serif Elegan), Caveat (Tulisan Tangan Manis), Plus Jakarta Sans (Teks Bersih) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       TEMA WARNA & VARIABEL CSS (Mendukung Mode Terang & Mode Gelap)
+       ========================================================================== */
+    :root {
+      --bg-gradient: linear-gradient(135deg, #fff5f5 0%, #ffe9ec 50%, #fff0f3 100%);
+      --text-main: #3d2730;
+      --text-muted: #724c59;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(244, 114, 182, 0.25);
+      --accent-pink: #f43f5e;
+      --accent-soft: #fbcfe8;
+      --accent-peach: #ffe4e6;
+      --leaf-green: #22c55e;
+      --player-bg: rgba(255, 255, 255, 0.92);
+      --shadow-color: rgba(244, 63, 94, 0.12);
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-hand: 'Caveat', cursive;
+    }
+
+    [data-theme="dark"] {
+      --bg-gradient: linear-gradient(135deg, #160d13 0%, #25121c 50%, #1a0f16 100%);
+      --text-main: #fce7f3;
+      --text-muted: #d4a5b8;
+      --card-bg: rgba(36, 20, 29, 0.85);
+      --card-border: rgba(244, 114, 182, 0.2);
+      --accent-pink: #fb7185;
+      --accent-soft: #4a1f33;
+      --accent-peach: #361725;
+      --player-bg: rgba(30, 16, 24, 0.92);
+      --shadow-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Reset & Tata Letak Dasar */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      color: var(--text-main);
+      background: var(--bg-gradient);
+      min-height: 100vh;
+      line-height: 1.6;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    body {
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animasi Kelopak & Hati di Latar Belakang */
+    #petal-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Pembungkus Konten Utama */
+    .container {
+      position: relative;
+      z-index: 10;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+    }
+
+    /* Tipografi Khas */
+    .font-serif { font-family: var(--font-serif); }
+    .font-hand { font-family: var(--font-hand); }
+
+    /* ==========================================================================
+       PEMUTAR MUSIK & TOMBOL TEMA FLOATING
+       ========================================================================== */
+    .floating-bar {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .music-widget {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px 8px 10px;
+      background: var(--player-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 9999px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px var(--shadow-color);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .music-widget:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Piringan Hitam Berputar */
+    .vinyl-disc {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #333 20%, #111 25%, #222 60%, #111 100%);
+      border: 2px solid #e11d48;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    .vinyl-disc.spinning {
+      animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .vinyl-center {
+      width: 14px;
+      height: 14px;
+      background: #f43f5e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vinyl-hole {
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .music-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .music-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .music-sub {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .theme-toggle-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--player-bg);
+      border: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px var(--shadow-color);
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      transform: scale(1.08);
+    }
+
+    /* ==========================================================================
+       BAGIAN 1: PEMBUKA & AMPLOP BERSEGEL
+       ========================================================================== */
+    .hero-section {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    .pill-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: var(--accent-peach);
+      border: 1px solid var(--card-border);
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-pink);
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .hero-handwriting {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: var(--accent-pink);
+      margin-bottom: 18px;
+    }
+
+    .hero-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 440px;
+      margin-bottom: 30px;
+    }
+
+    /* Amplop Animasi */
+    .envelope-box {
+      width: 250px;
+      height: 160px;
+      background: var(--card-bg);
+      border: 2px solid var(--accent-soft);
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 30px var(--shadow-color);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    .envelope-box:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 18px 40px var(--shadow-color);
+    }
+
+    .wax-seal {
+      width: 56px;
+      height: 56px;
+      background: radial-gradient(circle, #f43f5e, #be123c);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .envelope-box:hover .wax-seal {
+      transform: scale(1.1);
+    }
+
+    .envelope-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent-pink);
+      margin-top: 10px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 34px;
+      background: linear-gradient(135deg, #f43f5e 0%, #ec4899 100%);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 9999px;
+      box-shadow: 0 8px 24px rgba(244, 63, 94, 0.35);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.04);
+      box-shadow: 0 12px 30px rgba(244, 63, 94, 0.45);
+    }
+
+    /* ==========================================================================
+       BAGIAN 2: PENGAKUAN TULUS
+       ========================================================================== */
+    .section-block {
+      margin-top: 60px;
+      padding: 32px 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px var(--shadow-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      font-family: var(--font-hand);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent-pink);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 4px;
+    }
+
+    .confession-prose {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-main);
+      text-align: justify;
+    }
+
+    .confession-prose p + p {
+      margin-top: 14px;
+    }
+
+    .quote-box {
+      margin-top: 20px;
+      padding: 16px 20px;
+      border-left: 3px solid var(--accent-pink);
+      background: var(--accent-peach);
+      border-radius: 0 16px 16px 0;
+      font-style: italic;
+      color: var(--text-main);
+      font-size: 14px;
+    }
+
+    /* ==========================================================================
+       BAGIAN 3: DAFTAR KESALAHAN (FLIP CARDS)
+       ========================================================================== */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .flip-card {
+      perspective: 1000px;
+      height: 230px;
+      cursor: pointer;
+    }
+
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px var(--shadow-color);
+    }
+
+    .flip-card.is-flipped .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      inset: 0;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+    }
+
+    .card-front {
+      background: linear-gradient(145deg, var(--card-bg), var(--accent-peach));
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(145deg, var(--accent-peach), var(--card-bg));
+      border-color: var(--accent-pink);
+    }
+
+    .card-emoji {
+      font-size: 32px;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-pink);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 8px 0 4px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .card-hint {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-pink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       BAGIAN 4: TAMAN BUNGA INTERAKTIF
+       ========================================================================== */
+    .flower-buds-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .flower-bud-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 16px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--text-main);
+    }
+
+    .flower-bud-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px var(--shadow-color);
+    }
+
+    .flower-bud-btn.bloomed {
+      border-color: var(--accent-pink);
+      background: var(--accent-peach);
+    }
+
+    .flower-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .flower-bud-btn.bloomed .flower-icon {
+      transform: scale(1.2) rotate(6deg);
+    }
+
+    .flower-name {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .flower-status {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .flower-promise-panel {
+      margin-top: 20px;
+      padding: 18px 20px;
+      background: var(--accent-peach);
+      border-radius: 18px;
+      border: 1px dashed var(--accent-pink);
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==========================================================================
+       BAGIAN 5: PERTANYAAN UTAMA & TOMBOL KABUR
+       ========================================================================== */
+    .question-section {
+      text-align: center;
+      padding: 48px 20px;
+      margin-top: 60px;
+    }
+
+    .action-arena {
+      position: relative;
+      min-height: 160px;
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-yes {
+      padding: 16px 36px;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, #f43f5e 0%, #ec4899 100%);
+      border: none;
+      border-radius: 9999px;
+      box-shadow: 0 10px 30px rgba(244, 63, 94, 0.4);
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+      z-index: 20;
+    }
+
+    .btn-yes:hover {
+      box-shadow: 0 14px 40px rgba(244, 63, 94, 0.5);
+    }
+
+    .btn-no-wrapper {
+      display: inline-block;
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 10;
+    }
+
+    .btn-no {
+      padding: 12px 26px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 9999px;
+      box-shadow: 0 4px 15px var(--shadow-color);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       MODAL PERAYAAN KONFETI
+       ========================================================================== */
+    .celebration-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .celebration-overlay.active {
+      display: flex;
+    }
+
+    .celebration-card {
+      background: var(--card-bg);
+      border: 2px solid var(--accent-pink);
+      border-radius: 28px;
+      padding: 36px 28px;
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    /* ==========================================================================
+       BAGIAN 6: PENUTUP
+       ========================================================================== */
+    .closing-section {
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px 20px;
+    }
+
+    .closing-prose {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+    }
+
+    .closing-signature {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--text-main);
+      margin-top: 20px;
+    }
+
+    /* Media Queries untuk HP */
+    @media (max-width: 600px) {
+      .container { padding: 16px 14px 60px; }
+      .section-block { padding: 24px 16px; border-radius: 20px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .flower-buds-row { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Hormati prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Kanvas Partikel Kelopak & Hati Bergerak -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- Bar Kontrol Musik & Mode Gelap -->
+  <aside class="floating-bar">
+    <!-- Pemutar Musik: Lagu Seribu Bulan - Kahitna -->
+    <div class="music-widget" id="music-widget" title="Ketuk untuk memutar lagu kita 🎶">
+      <div class="vinyl-disc" id="vinyl-disc">
+        <div class="vinyl-center"><div class="vinyl-hole"></div></div>
+      </div>
+      <div class="music-text">
+        <span class="music-title">Seribu Bulan 🎵</span>
+        <span class="music-sub" id="music-subtext">Ketuk untuk memutar lagu kita 🎶</span>
+      </div>
+    </div>
+
+    <!-- Tombol Mode Gelap/Terang -->
+    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Ganti mode tampilan" title="Ganti Mode Gelap / Terang">
+      🌙
+    </button>
+  </aside>
+
+  <!-- 
+    =============================================================================
+    ELEMEN AUDIO DENGAN PLACEHOLDER FILE:
+    Untuk memutar lagu "Seribu Bulan" oleh Kahitna:
+    1. Siapkan file lagu MP3 Anda, lalu beri nama: "seribu-bulan.mp3"
+    2. Simpan file tersebut di folder yang sama persis dengan file HTML ini.
+    3. Jika file MP3 belum ada, website akan otomatis memutar melodi akustik
+       lembut berbasis Web Audio API agar musik tetap terdengar manis saat dicoba.
+    =============================================================================
+  -->
+  <audio id="audio-player" preload="metadata" loop>
+    <source src="/assets/aistudio/Seribu_Bulan_Sejuta_Malam___Kahitna_01658648.m4a" type="audio/mp4">
+    <source src="seribu-bulan.m4a" type="audio/mp4">
+    <source src="seribu-bulan.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Konten Utama Halaman -->
+  <main class="container">
+
+    <!-- 1. BAGIAN PEMBUKA -->
+    <section class="hero-section">
+      <div class="pill-kicker">
+        <span>💌</span>
+        <span>Surat Terbuka &amp; Terjujur</span>
+      </div>
+
+      <h1 class="hero-title font-serif">
+        Untuk Nila Uzlifatul Fikri Sa’adah
+      </h1>
+
+      <p class="hero-handwriting">
+        Ada seseorang yang mau ngomong sesuatu... 🥺👉👈
+      </p>
+
+      <p class="hero-desc">
+        Bukan soal urusan duniawi atau tumpukan deadline. Ini tulus dari sudut hati terdalam pacarmu yang belakangan ini agak linglung.
+      </p>
+
+      <!-- Amplop Interaktif -->
+      <div class="envelope-box" id="envelope-box" onclick="openEnvelope()" role="button" aria-label="Buka amplop surat">
+        <div class="wax-seal">❤️</div>
+        <div class="envelope-label">Ketuk Segel Hati</div>
+      </div>
+
+      <a href="#pengakuan" class="btn-primary" onclick="openEnvelope()">
+        <span>Buka ya 💌</span>
+      </a>
+    </section>
+
+    <!-- 2. BAGIAN PENGAKUAN -->
+    <section class="section-block" id="pengakuan">
+      <div class="section-header">
+        <div class="section-kicker">Jujur Dari Lubuk Hati</div>
+        <h2 class="section-title">Aku Minta Maaf ya, Cantik...</h2>
+      </div>
+
+      <div class="confession-prose">
+        <p>
+          Nila sayangku, belakangan ini aku mungkin terlihat terlalu fokus sama duniaku yang padat. Jam tidur ku ga teratur, waktu bareng kamu semakin berkurang, sering slow respon, bahkan video call yang udah ga sama lagi. Aku tau kamu ngerasa sepi dan bertanya-tanya “apa aku masih dicintai nya?”
+        </p>
+        <p>
+          Jawabannya: <strong>aku selalu mencintai kamu.</strong> Tapi aku sadar bahwa hidup bukan hanya soal cinta. Hidup terus berjalan dan aku berusaha melakukan yang terbaik untuk mengungkapkan rasa cintaku padamu dan bagaimana aku hadir didalam hari-harimu.
+        </p>
+        <p>
+          Maafkan aku yang tanpa sengaja membuat senyum manismu memudar dan membuat bidadari paling sabar ini merasa sendirian. Menjaga hatimu bahagia adalah janji yang aku buat sendiri untukmu, dan kemarin-kemarin aku gagal menjalankannya dengan baik.
+        </p>
+      </div>
+
+      <div class="quote-box font-serif">
+        “Karena bagi orang yang tulus mencintai, waktu untukmu bukanlah sisa-sisa waktu di ujung hari yang lelah, melainkan waktu yang selalu dipersiapkan dan dijaga khusus.”
+      </div>
+    </section>
+
+    <!-- 3. BAGIAN DAFTAR KESALAHAN (FLIP CARDS) -->
+    <section class="section-block" style="margin-top: 40px;">
+      <div class="section-header">
+        <div class="section-kicker">Pengakuan Terbuka 🙈</div>
+        <h2 class="section-title">Daftar Kesalahan Pacarmu yang Sibuk Ini</h2>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+          Ketuk kartu di bawah ini untuk melihat klarifikasi dan janji tobatnya yaa!
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Kartu 1 -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-inner">
+            <div class="card-front">
+              <div>
+                <span class="card-emoji">🐢</span>
+                <div class="card-tag">Tingkat Dosa: Bikin Sebal</div>
+                <h3 class="card-title">Balas Chat Lama</h3>
+                <p class="card-desc">Status online tapi balasan baru tiba setengah jam kemudian...</p>
+              </div>
+              <div class="card-hint">
+                <span>Ketuk untuk membalik</span>
+                <span>🔄</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <div class="card-tag">Janji Tobat:</div>
+                <h3 class="card-title">Klarifikasi Chat</h3>
+                <p class="card-desc">
+                  Aku ngaku salah! Kadang udah baca di notif, balesnya di otak, tapi jarinya lupa ngetik. Janji sekarang: Tiap ada jeda semenit pun, kabari Nila duluan!
+                </p>
+              </div>
+              <div class="card-hint">
+                <span style="font-family: var(--font-hand); font-size: 16px;">Maaf ya sayang ❤️</span>
+                <span>🔄</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 2 -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-inner">
+            <div class="card-front">
+              <div>
+                <span class="card-emoji">😴</span>
+                <div class="card-tag">Tingkat Dosa: Memalukan</div>
+                <h3 class="card-title">Janji Telepon Malah Ketiduran</h3>
+                <p class="card-desc">‘Nanti malam teleponan ya sayang’ -> 10 menit kemudian sudah di alam mimpi.</p>
+              </div>
+              <div class="card-hint">
+                <span>Ketuk untuk membalik</span>
+                <span>🔄</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <div class="card-tag">Janji Tobat:</div>
+                <h3 class="card-title">Tebusan Telepon</h3>
+                <p class="card-desc" style="color: #e30f27;">
+                  Sumpah ini memalukan... Niat hati mau dengar suara manismu, eh mata kalah sama bantal. Tebusan: Weekend ini aku siap teleponan sampai kamu yang ngantuk duluan!
+                </p>
+              </div>
+              <div class="card-hint">
+                <span style="font-family: var(--font-hand); font-size: 16px;">Ampun bidadariku 🥺</span>
+                <span>🔄</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 3 -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-inner">
+            <div class="card-front">
+              <div>
+                <span class="card-emoji">⏳</span>
+                <div class="card-tag">Tingkat Dosa: Terlalu Sering</div>
+                <h3 class="card-title">Sering Bilang ‘Sebentar Ya’</h3>
+                <p class="card-desc">‘Sebentar ya sayang’ tapi durasinya berasa kayak nunggu lebaran haji.</p>
+              </div>
+              <div class="card-hint">
+                <span>Ketuk untuk membalik</span>
+                <span>🔄</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <div class="card-tag">Janji Tobat:</div>
+                <h3 class="card-title">Kepastian Waktu</h3>
+                <p class="card-desc">
+                  Maaf banget sudah bikin kamu menunggu tanpa kepastian. Mulai sekarang, kalau memang ada hal mendesak, aku akan kasih estimasi menit yang pasti.
+                </p>
+              </div>
+              <div class="card-hint">
+                <span style="font-family: var(--font-hand); font-size: 16px;">Nggak digantung lagi 💕</span>
+                <span>🔄</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 4 -->
+        <div class="flip-card" onclick="toggleCard(this)">
+          <div class="flip-inner">
+            <div class="card-front">
+              <div>
+                <span class="card-emoji">🥺</span>
+                <div class="card-tag">Tingkat Dosa: Bikin Gemas</div>
+                <h3 class="card-title">Kurang Peka Sinyal Kangen</h3>
+                <p class="card-desc">Nila kirim kode kangen atau cerita hari ini, responsku cuma seadanya...</p>
+              </div>
+              <div class="card-hint">
+                <span>Ketuk untuk membalik</span>
+                <span>🔄</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <div>
+                <div class="card-tag">Janji Tobat:</div>
+                <h3 class="card-title">Upgrade Radar Peka</h3>
+                <p class="card-desc">
+                  Radar peka pacarmu ini lagi di-upgrade ke versi pro! Aku janji bakal dengerin setiap keluh kesah dan ceritamu dengan penuh antusias dan cinta.
+                </p>
+              </div>
+              <div class="card-hint">
+                <span style="font-family: var(--font-hand); font-size: 16px;">Telingaku siap mendengarkan ✨</span>
+                <span>🔄</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BAGIAN TAMAN BUNGA INTERAKTIF -->
+    <section class="section-block" style="margin-top: 40px;">
+      <div class="section-header">
+        <div class="section-kicker">Mekar Khusus Untukmu 🌸</div>
+        <h2 class="section-title">Taman Bunga Kasih Sayang</h2>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+          Sentuh kuncup bunga di bawah ini untuk memekarkannya dan membaca janji di dalamnya!
+        </p>
+      </div>
+
+      <div class="flower-buds-row">
+        <!-- Bunga 1: Mawar -->
+        <div class="flower-bud-btn" onclick="bloomFlower(0, '🌹 Mawar Merah', 'Waktu untukmu bukan sisa-sisa waktu di ujung hari yang lelah, tapi waktu yang akan selalu aku sisihkan dan jaga khusus.')">
+          <div class="flower-icon">🌹</div>
+          <div class="flower-name">Mawar</div>
+          <div class="flower-status" id="f-status-0">Sentuh aku ✨</div>
+        </div>
+
+        <!-- Bunga 2: Tulip -->
+        <div class="flower-bud-btn" onclick="bloomFlower(1, '🌷 Tulip Manis', 'Aku akan lebih sering kasih kabar tanpa harus kamu minta duluan, supaya harimu tenang dan nggak bertanya-tanya sendirian.')">
+          <div class="flower-icon">🌷</div>
+          <div class="flower-name">Tulip</div>
+          <div class="flower-status" id="f-status-1">Sentuh aku ✨</div>
+        </div>
+
+        <!-- Bunga 3: Sakura -->
+        <div class="flower-bud-btn" onclick="bloomFlower(2, '🌸 Sakura Lembut', 'Di antara jutaan hal yang bikin pusing di dunia ini, senyum dan tawamu selalu jadi tempat ternyaman untuk pulang dan istirahat.')">
+          <div class="flower-icon">🌸</div>
+          <div class="flower-name">Sakura</div>
+          <div class="flower-status" id="f-status-2">Sentuh aku ✨</div>
+        </div>
+
+        <!-- Bunga 4: Melati -->
+        <div class="flower-bud-btn" onclick="bloomFlower(3, '🌼 Melati Putih', 'Terima kasih sebesar-besarnya sudah bertahan dan sabar menghadapi pacarmu yang kadang kaku dan kurang ekspresif ini.')">
+          <div class="flower-icon">🌼</div>
+          <div class="flower-name">Melati</div>
+          <div class="flower-status" id="f-status-3">Sentuh aku ✨</div>
+        </div>
+
+        <!-- Bunga 5: Matahari -->
+        <div class="flower-bud-btn" onclick="bloomFlower(4, '🌻 Bunga Matahari', 'Seperti bunga matahari yang selalu menghadap cahaya hangat, mataku dan hatiku akan selalu terarah padamu, Nila tercinta.')">
+          <div class="flower-icon">🌻</div>
+          <div class="flower-name">Matahari</div>
+          <div class="flower-status" id="f-status-4">Sentuh aku ✨</div>
+        </div>
+      </div>
+
+      <!-- Kotak Janji Bunga yang Terbuka -->
+      <div id="flower-promise-panel" class="flower-promise-panel" style="display: none;">
+        <h4 id="promise-flower-title" style="font-family: var(--font-serif); font-size: 16px; font-weight: 700; color: var(--accent-pink); margin-bottom: 6px;"></h4>
+        <p id="promise-flower-text" style="font-size: 14px; font-style: italic; color: var(--text-main);"></p>
+      </div>
+    </section>
+
+    <!-- 5. BAGIAN PERTANYAAN UTAMA -->
+    <section class="question-section" id="pertanyaan">
+      <div class="section-kicker">Pertanyaan Paling Menentukan di Alam Semesta</div>
+      <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin-top: 8px;">
+        Nila, maafin aku ya? 🥺👉👈
+      </h2>
+      <p style="font-size: 14px; color: var(--text-muted); max-width: 440px; margin: 10px auto 0;">
+        Janji pacarmu ini: lebih peka, lebih ada, dan selalu mengutamakan bidadariku.
+      </p>
+
+      <!-- Arena Tombol -->
+      <div class="action-arena">
+        <!-- Tombol Iya (Makin Membesar) -->
+        <button class="btn-yes" id="btn-yes" onclick="celebrateForgiveness()">
+          Iya, dimaafin 💖
+        </button>
+
+        <!-- Tombol Nggak (Kabur & Mengecil) -->
+        <div class="btn-no-wrapper" id="btn-no-wrapper">
+          <button class="btn-no" id="btn-no" onmouseover="dodgeButton()" onclick="dodgeButton()" ontouchstart="dodgeButton(event)">
+            Nggak
+          </button>
+        </div>
+      </div>
+
+      <p id="dodge-hint" style="font-family: var(--font-hand); font-size: 20px; color: var(--accent-pink); margin-top: 18px; min-height: 28px;"></p>
+    </section>
+
+    <!-- 6. BAGIAN PENUTUP -->
+    <section class="closing-section">
+      <p class="closing-prose">
+        Terima kasih sudah meluangkan waktu membaca surat kecil ini sampai akhir. Maafkan segala khilaf dan kekuranganku kemarin, dan terima kasih sudah selalu memilih bertahan bersamaku.
+      </p>
+
+      <div class="closing-signature">
+        With Love,<br>
+        Once Yours
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL PERAYAAN KETIKA DIMAAFKAN -->
+  <div class="celebration-overlay" id="celebration-modal">
+    <div class="celebration-card">
+      <div style="font-size: 50px; margin-bottom: 10px;">🎉💖🌷</div>
+      <div class="section-kicker" style="font-size: 30px;">Alhamdulillah!</div>
+      <h3 class="font-serif" style="font-size: 24px; color: var(--text-main); margin: 8px 0 14px;">
+        Terima kasih sudah sabar, Nila 🌷
+      </h3>
+      <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">
+        Janji ini bukan cuma tulisan di layar HP, tapi komitmen nyata untuk selalu ada, mengabari lebih sering, dan memelukmu erat pas ketemu nanti! 🥰
+      </p>
+      <button class="btn-primary" onclick="closeCelebration()">
+        Aku Sayang Kamu Selalu 💕
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT MURNI (SEMUA LOGIKA, ANIMASI, & AUDIO SYNTHESIZER)
+       ========================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------------
+       1. WEB AUDIO SYNTHESIZER (Fallback Lagu & Efek Suara Romantis)
+       -------------------------------------------------------------------------- */
+    let audioCtx = null;
+    let isMuted = false;
+    let synthLoopTimer = null;
+    let isSynthPlaying = false;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) audioCtx = new AudioContextClass();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume().catch(() => {});
+      }
+      return audioCtx;
+    }
+
+    // Nada Lonceng Halus saat Balik Kartu
+    function playChime(freq = 587.33) {
+      if (isMuted) return;
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, now);
+      osc.frequency.exponentialRampToValueAtTime(freq * 1.25, now + 0.12);
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.35);
+    }
+
+    // Suara Petikan Harpa saat Bunga Mekar
+    function playBloomChime(step = 0) {
+      if (isMuted) return;
+      const notes = [440, 523.25, 587.33, 659.25, 783.99];
+      const freq = notes[step % notes.length];
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, now);
+      gain.gain.setValueAtTime(0.1, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.7);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.7);
+    }
+
+    // Suara Lucu saat Tombol Nggak Menghindar
+    function playDodgeSound() {
+      if (isMuted) return;
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(320, now);
+      osc.frequency.exponentialRampToValueAtTime(680, now + 0.08);
+      osc.frequency.exponentialRampToValueAtTime(400, now + 0.18);
+      gain.gain.setValueAtTime(0.09, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.2);
+    }
+
+    // Melodi Lullaby Akustik Romantis Berputar Lembut
+    function startRomanticSynth() {
+      if (isSynthPlaying) return;
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      isSynthPlaying = true;
+      const melody = [
+        { f: 349.23, d: 0.6 },
+        { f: 440.00, d: 0.6 },
+        { f: 523.25, d: 0.8 },
+        { f: 659.25, d: 1.0 },
+        { f: 587.33, d: 0.6 },
+        { f: 523.25, d: 0.8 },
+        { f: 440.00, d: 1.2 },
+        { f: 392.00, d: 0.6 },
+        { f: 440.00, d: 0.6 },
+        { f: 523.25, d: 1.4 }
+      ];
+      let noteIndex = 0;
+
+      function playStep() {
+        if (!isSynthPlaying) return;
+        const note = melody[noteIndex % melody.length];
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const osc2 = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(note.f, now);
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(note.f * 2, now);
+
+        gain.gain.setValueAtTime(0.04, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + note.d);
+
+        osc.connect(gain);
+        osc2.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc2.start(now);
+        osc.stop(now + note.d);
+        osc2.stop(now + note.d);
+
+        noteIndex++;
+        synthLoopTimer = setTimeout(playStep, note.d * 850);
+      }
+      playStep();
+    }
+
+    function stopRomanticSynth() {
+      isSynthPlaying = false;
+      if (synthLoopTimer) clearTimeout(synthLoopTimer);
+    }
+
+    /* --------------------------------------------------------------------------
+       2. LOGIKA PEMUTAR MUSIK "SERIBU BULAN - KAHITNA"
+       -------------------------------------------------------------------------- */
+    const audioPlayer = document.getElementById('audio-player');
+    const musicWidget = document.getElementById('music-widget');
+    const vinylDisc = document.getElementById('vinyl-disc');
+    const musicSubtext = document.getElementById('music-subtext');
+    let isMusicPlaying = false;
+
+    musicWidget.addEventListener('click', () => {
+      if (!isMusicPlaying) {
+        // Coba putar file audio MP3
+        audioPlayer.play().then(() => {
+          isMusicPlaying = true;
+          vinylDisc.classList.add('spinning');
+          musicSubtext.textContent = 'Kahitna (Memutar 🎵)';
+        }).catch(() => {
+          // Jika file seribu-bulan.mp3 belum ada, gunakan melodi akustik cadangan
+          startRomanticSynth();
+          isMusicPlaying = true;
+          vinylDisc.classList.add('spinning');
+          musicSubtext.textContent = 'Melodi Seribu Bulan 🎶';
+        });
+      } else {
+        audioPlayer.pause();
+        stopRomanticSynth();
+        isMusicPlaying = false;
+        vinylDisc.classList.remove('spinning');
+        musicSubtext.textContent = 'Ketuk untuk memutar lagu kita 🎶';
+      }
+    });
+
+    /* --------------------------------------------------------------------------
+       3. GANTI MODE TERANG / GELAP
+       -------------------------------------------------------------------------- */
+    const themeBtn = document.getElementById('theme-toggle');
+    let currentTheme = 'light';
+
+    themeBtn.addEventListener('click', () => {
+      if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeBtn.textContent = '☀️';
+        currentTheme = 'dark';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeBtn.textContent = '🌙';
+        currentTheme = 'light';
+      }
+    });
+
+    /* --------------------------------------------------------------------------
+       4. ANIMASI AMPLOP TERBUKA
+       -------------------------------------------------------------------------- */
+    function openEnvelope() {
+      playChime(659.25);
+      const target = document.getElementById('pengakuan');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       5. MEMBALIK KARTU KESALAHAN
+       -------------------------------------------------------------------------- */
+    function toggleCard(cardElem) {
+      playChime(523.25);
+      cardElem.classList.toggle('is-flipped');
+    }
+
+    /* --------------------------------------------------------------------------
+       6. TAMAN BUNGA MEKAR
+       -------------------------------------------------------------------------- */
+    const bloomedFlowers = {};
+    function bloomFlower(index, title, promiseText) {
+      bloomedFlowers[index] = true;
+      playBloomChime(index);
+
+      // Ubah tombol bunga menjadi mekar
+      const btn = document.querySelectorAll('.flower-bud-btn')[index];
+      if (btn) btn.classList.add('bloomed');
+
+      const status = document.getElementById('f-status-' + index);
+      if (status) status.textContent = 'Mekar 💖';
+
+      // Tampilkan panel janji
+      const panel = document.getElementById('flower-promise-panel');
+      const pTitle = document.getElementById('promise-flower-title');
+      const pText = document.getElementById('promise-flower-text');
+
+      pTitle.textContent = title;
+      pText.textContent = '“' + promiseText + '”';
+      panel.style.display = 'block';
+    }
+
+    /* --------------------------------------------------------------------------
+       7. LOGIKA TOMBOL NGGA (LARI, MENGECIL, GANTI TEKS) & TOMBOL IYA (MEMBESAR)
+       -------------------------------------------------------------------------- */
+    const funnyWords = [
+      'Nggak',
+      'Yakin nih? 🥺',
+      'Coba pikir-pikir lagi dong...',
+      'Masa tega sih sama pacar sendiri? 😿',
+      'Nanti aku beliin es krim & seblak lho 🍦🍲',
+      'Tombol ini lagi ngambek juga lho 🏃💨',
+      'Eits nggak kena! Wleee 😜',
+      'Pencet yang pink aja please 🥺💖',
+      'Udah capek lari, pencet sebelah aja ya! 💕'
+    ];
+
+    let dodgeCounter = 0;
+    const btnNoWrapper = document.getElementById('btn-no-wrapper');
+    const btnNo = document.getElementById('btn-no');
+    const btnYes = document.getElementById('btn-yes');
+    const dodgeHint = document.getElementById('dodge-hint');
+
+    function dodgeButton(event) {
+      if (event) event.preventDefault();
+      playDodgeSound();
+
+      dodgeCounter++;
+      const textIndex = Math.min(dodgeCounter, funnyWords.length - 1);
+      btnNo.textContent = funnyWords[textIndex];
+
+      // Gerak acak tombol nggak
+      const maxDist = Math.min(130, 40 + dodgeCounter * 12);
+      const randX = (Math.random() - 0.5) * maxDist * 2;
+      const randY = (Math.random() - 0.5) * maxDist * 1.5;
+      const noScale = Math.max(0.45, 1 - dodgeCounter * 0.08);
+
+      btnNoWrapper.style.transform = `translate(${randX}px, ${randY}px) scale(${noScale})`;
+
+      // Tombol Iya makin membesar
+      const yesScale = Math.min(1.5, 1 + dodgeCounter * 0.1);
+      btnYes.style.transform = `scale(${yesScale})`;
+
+      // Pesan hint lucu
+      if (dodgeCounter >= 3) {
+        dodgeHint.textContent = 'Tombol “Iya” sengaja dibesarin biar gampang diklik Nila lho 🙈';
+      } else {
+        dodgeHint.textContent = 'Tombolnya pemalu, nggak mau diklik hehe 🏃';
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       8. PERAYAAN KETIKA "IYA, DIMAAFIN" DIKLIK
+       -------------------------------------------------------------------------- */
+    function celebrateForgiveness() {
+      // Suara akor perayaan
+      const ctx = getAudioContext();
+      if (ctx && !isMuted) {
+        const chord = [523.25, 659.25, 783.99, 1046.50];
+        chord.forEach((freq, idx) => {
+          const now = ctx.currentTime + idx * 0.1;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now);
+          gain.gain.setValueAtTime(0.1, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now);
+          osc.stop(now + 1.2);
+        });
+      }
+
+      // Tembakkan konfeti kelopak & hati
+      spawnConfetti();
+
+      // Buka modal perayaan
+      document.getElementById('celebration-modal').classList.add('active');
+    }
+
+    function closeCelebration() {
+      document.getElementById('celebration-modal').classList.remove('active');
+    }
+
+    /* --------------------------------------------------------------------------
+       9. SISTEM PARTIKEL KELOPAK & HATI (CANVAS BACKGROUND)
+       -------------------------------------------------------------------------- */
+    const canvas = document.getElementById('petal-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const particleColors = [
+      'rgba(255, 182, 193, 0.75)',
+      'rgba(255, 192, 203, 0.7)',
+      'rgba(255, 218, 224, 0.8)',
+      'rgba(244, 143, 177, 0.65)'
+    ];
+
+    const particleCount = Math.min(Math.floor(width / 35), 35);
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height - height,
+        size: Math.random() * 8 + 8,
+        speedY: Math.random() * 1.2 + 0.8,
+        speedX: Math.random() * 0.6 - 0.3,
+        rotation: Math.random() * 360,
+        rotationSpeed: (Math.random() - 0.5) * 1.5,
+        opacity: Math.random() * 0.5 + 0.4,
+        type: Math.random() > 0.3 ? 'petal' : 'heart',
+        color: particleColors[Math.floor(Math.random() * particleColors.length)],
+        swingAngle: Math.random() * Math.PI * 2,
+        swingSpeed: Math.random() * 0.03 + 0.015
+      });
+    }
+
+    function drawPetalParticle(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate((p.rotation * Math.PI) / 180);
+      ctx.globalAlpha = p.opacity;
+      ctx.fillStyle = p.color;
+
+      if (p.type === 'heart') {
+        const s = p.size * 0.5;
+        ctx.beginPath();
+        ctx.moveTo(0, s * 0.3);
+        ctx.bezierCurveTo(-s, -s * 0.6, -s * 1.2, s * 0.3, 0, s * 1.1);
+        ctx.bezierCurveTo(s * 1.2, s * 0.3, s, -s * 0.6, 0, s * 0.3);
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        ctx.ellipse(0, 0, p.size * 0.7, p.size * 0.4, Math.PI / 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    function renderLoop() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.swingAngle += p.swingSpeed;
+        p.x += Math.sin(p.swingAngle) * 0.8 + p.speedX;
+        p.y += p.speedY;
+        p.rotation += p.rotationSpeed;
+
+        if (p.y > height + 20) {
+          p.y = -20;
+          p.x = Math.random() * width;
+        }
+        if (p.x > width + 20) p.x = -20;
+        else if (p.x < -20) p.x = width + 20;
+
+        drawPetalParticle(p);
+      }
+      requestAnimationFrame(renderLoop);
+    }
+    renderLoop();
+
+    /* --------------------------------------------------------------------------
+       10. SISTEM KONFETI PERAYAAN
+       -------------------------------------------------------------------------- */
+    function spawnConfetti() {
+      const confettiColors = ['#f43f5e', '#ec4899', '#f472b6', '#fbbf24', '#34d399'];
+      for (let i = 0; i < 70; i++) {
+        particles.push({
+          x: width / 2 + (Math.random() - 0.5) * 150,
+          y: height / 2 + (Math.random() - 0.5) * 100,
+          size: Math.random() * 10 + 8,
+          speedY: (Math.random() - 0.7) * 14,
+          speedX: (Math.random() - 0.5) * 16,
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 8,
+          opacity: 1,
+          type: Math.random() > 0.4 ? 'heart' : 'petal',
+          color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+          swingAngle: Math.random() * Math.PI * 2,
+          swingSpeed: 0.05
+        });
+      }
+    }
+  </script>
+</body>
+</html>
