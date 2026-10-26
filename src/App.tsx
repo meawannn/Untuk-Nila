@@ -10,7 +10,8 @@ import { LetterEnvelope } from './components/LetterEnvelope';
 import { ApologyCards } from './components/ApologyCards';
 import { InteractiveFlowers } from './components/InteractiveFlowers';
 import { QuestionSection } from './components/QuestionSection';
-import { Sun, Moon, Sparkles } from 'lucide-react';
+import { GoogleDriveSection } from './components/GoogleDriveSection';
+import { Sun, Moon, Sparkles, FolderGit2 } from 'lucide-react';
 
 export default function App() {
   const [isDark, setIsDark] = useState<boolean>(false);
@@ -43,8 +44,8 @@ export default function App() {
 
       {/* Floating Header Controls */}
       <header className="fixed top-4 left-4 right-4 z-40 flex items-center justify-between pointer-events-none">
-        {/* Left Side: Theme Switcher */}
-        <div className="pointer-events-auto">
+        {/* Left Side: Theme Switcher & Drive Link */}
+        <div className="pointer-events-auto flex items-center gap-2">
           <button
             onClick={() => setIsDark(!isDark)}
             className={`flex h-10 w-10 items-center justify-center rounded-full shadow-lg backdrop-blur-md border transition-all duration-300 cursor-pointer ${
@@ -57,6 +58,19 @@ export default function App() {
           >
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
+
+          <a
+            href="#google-drive-section"
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold shadow-lg backdrop-blur-md border transition-all cursor-pointer ${
+              isDark
+                ? 'bg-rose-950/80 border-rose-800/60 text-rose-200 hover:bg-rose-900/80'
+                : 'bg-white/90 border-rose-200/80 text-rose-800 hover:bg-rose-50'
+            }`}
+            title="Google Drive Skripsi & Surat"
+          >
+            <FolderGit2 className="h-3.5 w-3.5 text-rose-500" />
+            <span className="hidden sm:inline">Google Drive</span>
+          </a>
         </div>
 
         {/* Right Side: Floating Audio Player ("Seribu Bulan" - Kahitna) */}
@@ -120,10 +134,13 @@ export default function App() {
         {/* 4. BAGIAN TAMAN BUNGA INTERAKTIF (Kuncup Mekar & Janji) */}
         <InteractiveFlowers isDark={isDark} />
 
-        {/* 5. BAGIAN PERTANYAAN UTAMA (Tombol Kabur & Perayaan) */}
+        {/* 5. BAGIAN GOOGLE DRIVE: Berkas Skripsi & Cadangan Surat */}
+        <GoogleDriveSection isDark={isDark} />
+
+        {/* 6. BAGIAN PERTANYAAN UTAMA (Tombol Kabur & Perayaan) */}
         <QuestionSection isDark={isDark} />
 
-        {/* 6. BAGIAN PENUTUP */}
+        {/* 7. BAGIAN PENUTUP */}
         <footer className="mt-16 pt-10 border-t border-rose-200/60 dark:border-rose-800/40 text-center">
           <p className="text-sm sm:text-base text-rose-800/80 dark:text-rose-200/80 max-w-md mx-auto leading-relaxed font-sans">
             Terima kasih sudah meluangkan waktu membaca surat kecil ini sampai akhir. Maafkan segala khilaf dan kekuranganku kemarin, dan terima kasih sudah selalu memilih bertahan bersamaku.
